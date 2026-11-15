@@ -78,7 +78,7 @@ def agent_card(request: Request):
     host = request.headers.get("x-forwarded-host") or request.headers.get("host")
     proto = request.headers.get("x-forwarded-proto", "https")
     base = os.getenv("PUBLIC_URL") or f"{proto}://{host}"
-    api = f"{base}/v1"
+    api = f"{base}/v1/responses"
     return {
         "protocolVersion": "0.3.0",
         "name": "Agente CV - Sebastián González",

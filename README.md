@@ -1,11 +1,21 @@
 # Agente CV – Sebastián González García
 
+> **Nota importante – plan gratuito:** el agente está desplegado en el plan gratuito de Render, por lo que **el servicio debe estar encendido (despierto) para responder**. Tras ~15 minutos sin tráfico, Render lo suspende y la primera petición puede tardar alrededor de un minuto en despertarlo, lo que puede provocar un timeout. Antes de probarlo, abre la agent card en el navegador (`/.well-known/agent-card.json`), espera a que cargue y luego usa el agente.
+
+**Stack gratuito:** se usan **Render** (hosting) y **Google Gemini** (LLM) porque ofrecen niveles gratuitos suficientes para este proyecto.
+
 Agente conversacional que representa el perfil profesional de Sebastián: experiencia, habilidades, proyectos y educación. Responde preguntas de reclutadores, hace *match* contra descripciones de puesto y apoya con preguntas de entrevista, siempre basándose en un CV estructurado (`cv.json`).
 
 Expone una API compatible con **Open Responses** (`POST /v1/responses`) y publica una **tarjeta de agente A2A** (`/.well-known/agent-card.json`) para descubrimiento e importación.
 
 - **URL base (Open Responses):** `https://<TU-APP>.onrender.com/v1`
 - **Agent card:** `https://<TU-APP>.onrender.com/.well-known/agent-card.json`
+
+## Demo
+
+<video src="media/demo.mp4" controls width="100%"></video>
+
+Si el video no se reproduce en tu visor, ábrelo directamente: [media/demo.mp4](media/demo.mp4)
 
 ---
 
@@ -51,7 +61,7 @@ Componentes: `main.py` (API y lógica), `cv.json` (fuente de verdad), `Dockerfil
 | **Servidor sin estado: la plataforma reenvía la transcripción** | Con el modo "Reproducir transcripción", cada petición trae todo el historial. No hay base de datos ni sesiones que mantener, y el servicio escala o se reinicia sin perder conversaciones. |
 | **Normalización de la entrada** | `input` puede ser texto o una lista de ítems con contenido en distintos formatos; `to_messages` los reduce a mensajes `user`/`assistant`. |
 | **Agent card A2A en `/.well-known/agent-card.json`** | Permite importar el agente en la plataforma con una URL y describe sus habilidades (preguntas sobre el CV, match con puesto, preparación de entrevista). La URL pública se toma de `PUBLIC_URL` o de las cabeceras del proxy. Nota: se implementa la tarjeta de descubrimiento, no mensajería A2A completa. |
-| **Gemini (nivel gratuito) como LLM** | Cero costo para un proyecto de esta escala. El modelo se configura con la variable `LLM_MODEL`. |
+| **Gemini (nivel gratuito) como LLM** | Se eligió por ser una opción gratuita, con costo cero para un proyecto de esta escala. El modelo se configura con la variable `LLM_MODEL`. |
 | **Modelo rápido primero, modelo más capaz como respaldo** | En pruebas, el modelo principal llegaba a `504 DEADLINE_EXCEEDED`. Se priorizó latencia: primero el modelo *lite*, y si falla, el modelo más capaz. |
 | **Timeout de 25 s por intento y razonamiento reducido** | El proxy de Cloudflare corta a ~100 s (error 524). Con dos intentos de 25 s, el peor caso queda por debajo de ese límite. El nivel de razonamiento se baja (`thinking_level="low"` / `thinking_budget=0`) porque para preguntas sobre un CV el razonamiento largo solo añade latencia. Si el modelo rechaza esa opción, se reintenta sin ella. |
 | **Degradación elegante** | Si todos los modelos fallan, la API responde 200 con un mensaje claro en lugar de un error 5xx, y el detalle del error queda solo en los logs. |
@@ -61,7 +71,7 @@ Componentes: `main.py` (API y lógica), `cv.json` (fuente de verdad), `Dockerfil
 | Decisión | Por qué |
 |---|---|
 | **Contenedor Docker** (`python:3.12-slim`) | Entorno reproducible y portable entre proveedores. El puerto se toma de `$PORT`. |
-| **Render (plan gratuito)** | Despliegue desde GitHub con un solo clic, HTTPS incluido y costo cero. Se prefirió a Fly.io, que ya no ofrece plan gratuito para cuentas nuevas. |
+| **Render (plan gratuito)** | Se eligió por ser una opción gratuita: despliegue desde GitHub con un solo clic, HTTPS incluido y costo cero. A cambio, el servicio se suspende por inactividad (ver la nota al inicio). Se prefirió a Fly.io, que ya no ofrece plan gratuito para cuentas nuevas. |
 | **Secretos en variables de entorno** | `GEMINI_API_KEY`, `LLM_MODEL`, `PUBLIC_URL` y `AGENT_API_KEY` nunca están en el código ni en el repositorio. |
 | **Repositorio privado** | `cv.json` contiene datos personales. |
 | **Túnel de Cloudflare solo para desarrollo** | Permitió probar con la plataforma desde la PC local antes de desplegar. |
