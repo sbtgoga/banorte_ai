@@ -13,7 +13,7 @@ Expone una API compatible con **Open Responses** (`POST /v1/responses`) y public
 
 ## Demo
 
-<video src="media/demo.mp4" controls width="100%"></video>
+<video src="media/demo.mp4" width="100%"></video>
 
 Si el video no se reproduce en tu visor, ábrelo directamente: [media/demo.mp4](media/demo.mp4)
 
