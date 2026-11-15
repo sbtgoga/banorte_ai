@@ -1,0 +1,290 @@
+{
+  "agent_guidance": {
+    "subject": "Sebastián González García",
+    "as_of": "2026-11",
+    "contact_policy": "Share only the email address. Do not share any other personal contact details.",
+    "not_in_cv": "Salary expectations, references, visa/work authorization, and personal life are not covered. Say so and suggest contacting him by email.",
+    "client_confidentiality": "Two clients are undisclosed (insurance company in South Korea, oil company). Never guess or name them.",
+    "current_roles": "Software Engineering Consultant at Cincinnati AI (since 2025-04), currently on the South Korea insurance project (since 2026-10)."
+  },
+  "profile": {
+    "name": "Sebastián González García",
+    "title": "Software Engineering Consultant",
+    "location": "San Francisco, California, USA",
+    "email": "sbt.goga@gmail.com",
+    "summary": "Software engineer with experience in full-stack development, Android engineering, backend systems, AI integration, distributed workflows, and software architecture. Background in mechatronics, robotics and autonomous systems.",
+    "languages": {
+      "Spanish": "Native",
+      "English": "C1",
+      "German": "B1",
+      "French": "A2"
+    }
+  },
+  "experience": [
+    {
+      "company": "Cincinnati AI",
+      "title": "Software Engineering Consultant",
+      "start": "2025-04",
+      "end": null,
+      "current": true,
+      "note": "Consulting firm; he works with different clients. Client engagements below, most recent first.",
+      "engagements": [
+        {
+          "client": "Insurance company (undisclosed), South Korea",
+          "project": "AI-integrated transaction processing system connecting hospitals and insurance providers",
+          "role": "Full-stack system design",
+          "start": "2026-10",
+          "end": null,
+          "current": true,
+          "highlights": [
+            "Designed and planned the architecture of the full-stack, AI-integrated system.",
+            "Built backend services in Go and Node.js for production deployment and optimization of claims and transaction workflows.",
+            "Implemented MongoDB-based data management and integrated AI components to optimize transaction processing.",
+            "Used AI agents and task orchestration to automate repetitive development tasks across Go and Node.js codebases."
+          ],
+          "tech": [
+            "Go",
+            "Node.js",
+            "MongoDB",
+            "AI agents",
+            "Task orchestration",
+            "Full-stack architecture"
+          ]
+        },
+        {
+          "client": "Walmart, Sunnyvale, California, USA",
+          "project": "Marketplace Seller App",
+          "role": "Senior Full-stack Developer",
+          "start": "2025-08",
+          "end": "2026-09",
+          "current": false,
+          "leadership": "Led a three-person team delivering order listing, details and creation workflows (unified orders experience).",
+          "highlights": [
+            "Unified orders experience consolidating Etsy, Amazon and eBay orders.",
+            "Barcode scanning supporting GTIN and SKU identifiers, with a normalization layer.",
+            "Migrated the product filter UI to an internal component with backend-powered filtering by brand and product type.",
+            "Proof of concept for dynamically injecting Fragments into existing Activities, plus deep linking.",
+            "Built Python applications and AI-assisted tools to automate development workflows.",
+            "Fixed bugs, improved accessibility, increased code coverage and implemented functional tests."
+          ],
+          "tech": [
+            "Android",
+            "Kotlin",
+            "Python",
+            "AI-assisted development",
+            "GTIN/SKU",
+            "Fragments",
+            "Deep linking",
+            "Accessibility",
+            "Functional testing"
+          ]
+        },
+        {
+          "client": "Oil company (undisclosed)",
+          "project": "Android trip tracking and spatial application",
+          "role": "Android developer",
+          "start": "2025-05",
+          "end": "2025-08",
+          "current": false,
+          "highlights": [
+            "Trip tracking that collects and persists location pings every five minutes, including offline operation.",
+            "Offline-first data synchronization and conflict resolution with backend endpoints.",
+            "Vendor job allocation screens with filtering and sorting of open work orders.",
+            "Remote configuration for dynamic feature flags and application visibility."
+          ],
+          "tech": [
+            "Android",
+            "Offline-first",
+            "Location tracking",
+            "Data sync",
+            "Conflict resolution",
+            "Remote config",
+            "Feature flags"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Mercedes-Benz KEHM",
+      "location": "Bad Neustadt, Germany",
+      "title": "Automotive Mechatronics Technician Intern",
+      "start": "2024-02",
+      "end": "2024-03",
+      "current": false,
+      "highlights": [
+        "Diagnosed and solved mechanical issues in commercial vehicles.",
+        "Performed vehicle maintenance and repair tasks.",
+        "Worked alongside experienced mechanics in a high-pressure environment."
+      ]
+    },
+    {
+      "company": "NATMA",
+      "location": "Mexico City, Mexico",
+      "title": "Autonomous Systems Developer",
+      "project": "Autonomous steering system for autonomous vehicles",
+      "start": "2022-01",
+      "end": "2023-06",
+      "current": false,
+      "highlights": [
+        "Trained neural networks to optimize autonomous vehicle steering.",
+        "Enhanced chassis design and optimized sensor placement.",
+        "Applied neural network architectures to improve computer vision and environmental perception."
+      ],
+      "tech": [
+        "Neural networks",
+        "Machine learning",
+        "Computer vision",
+        "Autonomous vehicles"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Tecnológico de Monterrey, Mexico City",
+      "degree": "B.Sc. in Mechatronics Engineering",
+      "start": "2020-08",
+      "end": "2024-12",
+      "gpa": 3.7
+    },
+    {
+      "school": "Technische Hochschule Würzburg-Schweinfurt, Germany",
+      "degree": "Study abroad in Robotics (specialization: Artificial Intelligence)",
+      "start": "2023-09",
+      "end": "2024-06",
+      "gpa": 3.5
+    }
+  ],
+  "academic_projects": [
+    {
+      "name": "Digital twin for a process training unit",
+      "partners": [
+        "Rockwell Automation",
+        "Endress+Hauser"
+      ],
+      "start": "2024-11",
+      "end": null,
+      "highlights": [
+        "As-built simulation in NVIDIA Omniverse for VR.",
+        "Emulation in Emulate 3D for real-time interaction and monitoring.",
+        "3D models designed in SolidWorks and Blender.",
+        "Connected PLC communication with Emulate 3D and FactoryTalk Echo."
+      ],
+      "tech": [
+        "NVIDIA Omniverse",
+        "Emulate 3D",
+        "SolidWorks",
+        "Blender",
+        "PLC",
+        "FactoryTalk Echo",
+        "Digital twins",
+        "VR"
+      ]
+    }
+  ],
+  "skills": {
+    "languages": [
+      "Go",
+      "Java",
+      "Python",
+      "Kotlin",
+      "C++",
+      "SQL",
+      "MATLAB"
+    ],
+    "backend": [
+      "Node.js",
+      "Spring Boot",
+      "Spring Cloud",
+      "Spring Security",
+      "Spring Data JPA"
+    ],
+    "mobile": [
+      "Android",
+      "Kotlin"
+    ],
+    "ai": [
+      "Claude AI",
+      "AI agents",
+      "Agent delegation",
+      "Agentic workflows",
+      "Task orchestration",
+      "AI workflow automation",
+      "Prompt engineering",
+      "TensorFlow",
+      "Neural networks",
+      "Computer vision",
+      "OpenCV"
+    ],
+    "data": [
+      "MongoDB",
+      "SQL",
+      "ACID compliance"
+    ],
+    "quality_performance": [
+      "SonarQube",
+      "Performance profiling",
+      "Memory management",
+      "JVM tuning"
+    ],
+    "robotics_engineering": [
+      "ROS",
+      "Ubuntu",
+      "Arduino",
+      "SolidWorks",
+      "CAD",
+      "Technomatix",
+      "Emulate 3D",
+      "NVIDIA Omniverse",
+      "Ladder",
+      "Grafcet",
+      "FluidSIM"
+    ],
+    "office": [
+      "Word",
+      "Excel",
+      "PowerPoint"
+    ]
+  },
+  "certifications_and_awards": [
+    {
+      "name": "CompTIA Security+",
+      "issuer": "Walmart",
+      "date": "2025-10"
+    },
+    {
+      "name": "Meta Android Developer Professional Certificate",
+      "issuer": "Cincinnati AI",
+      "date": "2025-06"
+    },
+    {
+      "name": "Intermediate Robotics (CEE): Sensors and Conveyors",
+      "issuer": "Siemens",
+      "date": "2023-05"
+    },
+    {
+      "name": "Modeling and Kinematics: Kinematics Basics",
+      "issuer": "Siemens",
+      "date": "2023-05"
+    },
+    {
+      "name": "FTC Finalist Alliance (National)",
+      "issuer": "FIRST",
+      "date": "2020-01"
+    },
+    {
+      "name": "FTC Winners Award (Regional)",
+      "issuer": "FIRST",
+      "date": "2019-10"
+    },
+    {
+      "name": "FTC Control Award (Regional)",
+      "issuer": "FIRST",
+      "date": "2019-10"
+    },
+    {
+      "name": "Beaver Works Summer Institute - Self-Driving Cars",
+      "issuer": "MIT",
+      "date": "2019-07"
+    }
+  ]
+}
